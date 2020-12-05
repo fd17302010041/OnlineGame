@@ -13,24 +13,20 @@ public interface GameMapper {
     @Select("select * from game where gamename = #{gamename}")
     Game selectGamerByName(String name);
 
-    @Select("select * from game where gameid = #{gameid}")
-    Game selectGamerById(int gameid);
+    @Select("select * from game where gameId = #{gameId}")
+    Game selectGamerById(int gameId);
 
-    @Select("select * from rank where gameid = #{gameid}")
-    List<Rank> gameRank(int gameid);
+    @Select("select * from rank where gameId = #{gameId} order by score DESC")
+    List<Rank> gameRank(int gameId);
 
-    @Select("select * from comment where gameid = #{gameid}")
-    List<Comment> commentList (int gameid);
+    @Select("select * from comment where gameId = #{gameId}")
+    List<Comment> commentList (int gameId);
 
-    @Insert("insert into comment(username,gameId,comment,grade,date) values (#{username},#{gameId},#{comment},#{grade},#{date)")
+    @Insert("insert into comment(username,gameId,comment,grade,date) values (#{username},#{gameId},#{comment},#{grade},#{date})")
     int insertComment(Comment comment);
 
-    @Insert("insert into comment(username,gameId,comment,grade,date) values (#{username},#{gameId},#{comment},#{grade},#{date)")
+    @Insert("insert into rank(username,gameId,score,date) values (#{username},#{gameId},#{score},#{date})")
     int insertRank(Rank rank);
 
 
-
-
-//    @Insert("insert into game(gamename,mark) values (#{gamename},#{mark})")
-//    int insertGame(Game mygame);
 }

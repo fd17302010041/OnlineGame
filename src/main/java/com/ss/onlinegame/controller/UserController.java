@@ -24,7 +24,7 @@ public class UserController {
     }
 
     @RequestMapping(value = "/usr/signup",method = RequestMethod.POST)
-    public Message register(@RequestParam(value = "usrname",required = false) String username,
+    public Message register(@RequestParam(value = "username",required = false) String username,
                             @RequestParam(value = "pwd",required = false) String password,
                             @RequestParam(value = "phone",required = false) String phone,
                             @RequestParam(value = "email") String email){
@@ -156,37 +156,6 @@ public class UserController {
 //            rankMessage.setRanks(ranks);
 //            rankMessage.setResult(true);
 //            return rankMessage;
-//        }
-//    }
-
-//    @RequestMapping(value = "/data/user/comment",method = RequestMethod.POST)
-//    public Message comment(HttpSession session,
-//                        @RequestParam(value = "gameId") int gameId,
-//                        @RequestParam(value = "date") String date,
-//                        @RequestParam(value = "content") String content,
-//                        @RequestParam(value = "mark") int mark){
-//        if(session.getAttribute("username") == null){
-//            Message message = new Message();
-//            message.setResult(false);
-//            message.setMessage("用户未登录。");
-//            return message;
-//        }else {
-//            String username = (String) session.getAttribute("username");
-//            Comment comment = new Comment();
-//
-//            comment.setUsername(username);
-//            comment.setGameid(gameId);
-//            comment.setDate(date);
-//            comment.setContent(content);
-//            comment.setGrade(mark);
-//
-//            Message message = new Message();
-//            if(userService.insertComment(comment) != 0){
-//                message.setResult(true);
-//                return message;
-//            }
-//            message.setResult(false);
-//            return message;
 //        }
 //    }
 }

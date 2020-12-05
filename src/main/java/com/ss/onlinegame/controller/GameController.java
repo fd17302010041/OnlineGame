@@ -1,6 +1,7 @@
 package com.ss.onlinegame.controller;
 
 import com.ss.onlinegame.bean.Comment;
+import com.ss.onlinegame.bean.Game;
 import com.ss.onlinegame.bean.Rank;
 import com.ss.onlinegame.bean.messageBean.*;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -24,24 +25,24 @@ public class GameController {
         this.gameService = gameService;
     }
 
-//    @RequestMapping(value = "/data/game/information",method = RequestMethod.POST)
-//    public Message information(HttpSession session,
-//                               @RequestParam(value = "gameId") int gameId){
-//        if(session.getAttribute("username")!=null){
-//            Game game = gameService.selectGamerById(gameId);
-//            GameInfoMessage gameInfoMessage = new GameInfoMessage();
-//            gameInfoMessage.setResult(true);
-//            gameInfoMessage.setGamename(game.getGamename());
-//            gameInfoMessage.setComments(game.getComments());
-//            gameInfoMessage.setMark(game.getGrade());
-//
-//            return gameInfoMessage;
-//        }
-//        Message message = new Message();
-//        message.setResult(false);
-//        message.setMessage("用户未登录。");
-//        return message;
-//    }
+    @RequestMapping(value = "/data/game/information",method = RequestMethod.POST)
+    public Message information(HttpSession session,
+                               @RequestParam(value = "gameId") int gameId){
+        if(session.getAttribute("username")!=null){
+            Game game = gameService.selectGamerById(gameId);
+            GameInfoMessage gameInfoMessage = new GameInfoMessage();
+            gameInfoMessage.setResult(true);
+            gameInfoMessage.setGamename(game.getGamename());
+            gameInfoMessage.setComments(game.getComments());
+            gameInfoMessage.setMark(game.getGrade());
+
+            return gameInfoMessage;
+        }
+        Message message = new Message();
+        message.setResult(false);
+        message.setMessage("用户未登录。");
+        return message;
+    }
 
     @RequestMapping(value = "/game/rank",method = RequestMethod.POST)
     public Message ranks(HttpSession session,
