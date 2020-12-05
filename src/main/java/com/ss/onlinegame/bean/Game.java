@@ -1,11 +1,11 @@
-package bean;
+package com.ss.onlinegame.bean;
 
 import java.util.ArrayList;
 
 public class Game {
     private int gameid;
     private String gamename;
-    private int mark;
+    private int grade;
     private ArrayList<Comment> comments;
 
     public int getGameid() {
@@ -24,12 +24,12 @@ public class Game {
         this.gamename = gamename;
     }
 
-    public int getMark() {
-        return mark;
+    public int getGrade() {
+        return grade;
     }
 
-    public void setMark(int mark) {
-        this.mark = mark;
+    public void setGrade(int mark) {
+        this.grade = mark;
     }
 
     public ArrayList<Comment> getComments() {

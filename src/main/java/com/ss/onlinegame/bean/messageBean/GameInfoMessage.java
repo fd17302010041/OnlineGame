@@ -1,6 +1,6 @@
-package bean.messageBean;
+package com.ss.onlinegame.bean.messageBean;
 
-import bean.Comment;
+import com.ss.onlinegame.bean.Comment;
 
 import java.util.List;
 

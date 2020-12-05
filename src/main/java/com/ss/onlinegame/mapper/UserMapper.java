@@ -1,8 +1,8 @@
-package mapper;
+package com.ss.onlinegame.mapper;
 
-import bean.Comment;
-import bean.Rank;
-import bean.User;
+import com.ss.onlinegame.bean.Comment;
+import com.ss.onlinegame.bean.Rank;
+import com.ss.onlinegame.bean.User;
 import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Select;
 import org.springframework.stereotype.Component;

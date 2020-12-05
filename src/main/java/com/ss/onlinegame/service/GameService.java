@@ -1,9 +1,9 @@
-package service;
+package com.ss.onlinegame.service;
 
-import bean.Comment;
-import bean.Game;
-import bean.Rank;
-import mapper.GameMapper;
+import com.ss.onlinegame.bean.Comment;
+import com.ss.onlinegame.bean.Game;
+import com.ss.onlinegame.bean.Rank;
+import com.ss.onlinegame.mapper.GameMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -34,7 +34,15 @@ public class GameService {
         return gameMapper.commentList(gameId);
     }
 
-    public int insertGame(Game game){
-        return gameMapper.insertGame(game);
+    public int insertComment(Comment comment){
+        return gameMapper.insertComment(comment);
     }
+
+    public int insertRank(Rank rank){
+        return gameMapper.insertRank(rank);
+    }
+
+//    public int insertGame(Game game){
+//        return gameMapper.insertGame(game);
+//    }
 }

@@ -1,9 +1,9 @@
-package service;
+package com.ss.onlinegame.service;
 
-import bean.Comment;
-import bean.Rank;
-import bean.User;
-import mapper.UserMapper;
+import com.ss.onlinegame.bean.Comment;
+import com.ss.onlinegame.bean.Rank;
+import com.ss.onlinegame.bean.User;
+import com.ss.onlinegame.mapper.UserMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

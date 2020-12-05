@@ -1,4 +1,4 @@
-package config;
+package com.ss.onlinegame.config;
 
 import org.apache.catalina.session.StandardSessionFacade;
 import org.springframework.context.annotation.Bean;

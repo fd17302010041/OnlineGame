@@ -1,4 +1,4 @@
-package bean;
+package com.ss.onlinegame.bean;
 
 public class User {
     private String username;

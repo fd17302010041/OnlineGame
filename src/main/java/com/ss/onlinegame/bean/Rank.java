@@ -1,4 +1,4 @@
-package bean;
+package com.ss.onlinegame.bean;
 
 public class Rank {
     private int gameId;

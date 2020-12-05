@@ -1,4 +1,4 @@
-package bean.messageBean;
+package com.ss.onlinegame.bean.messageBean;
 
 public class Message {
     private boolean result;

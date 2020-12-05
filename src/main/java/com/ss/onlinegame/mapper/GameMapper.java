@@ -1,6 +1,6 @@
-package mapper;
+package com.ss.onlinegame.mapper;
 
-import bean.*;
+import com.ss.onlinegame.bean.*;
 import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Select;
 import org.springframework.stereotype.Component;
@@ -22,6 +22,15 @@ public interface GameMapper {
     @Select("select * from comment where gameid = #{gameid}")
     List<Comment> commentList (int gameid);
 
-    @Insert("insert into game(gamename,mark) values (#{gamename},#{mark})")
-    int insertGame(Game mygame);
+    @Insert("insert into comment(username,gameId,comment,grade,date) values (#{username},#{gameId},#{comment},#{grade},#{date)")
+    int insertComment(Comment comment);
+
+    @Insert("insert into comment(username,gameId,comment,grade,date) values (#{username},#{gameId},#{comment},#{grade},#{date)")
+    int insertRank(Rank rank);
+
+
+
+
+//    @Insert("insert into game(gamename,mark) values (#{gamename},#{mark})")
+//    int insertGame(Game mygame);
 }

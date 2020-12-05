@@ -1,4 +1,4 @@
-package listener;
+package com.ss.onlinegame.listener;
 
 import org.springframework.stereotype.Component;
 

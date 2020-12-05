@@ -1,6 +1,6 @@
-package bean.messageBean;
+package com.ss.onlinegame.bean.messageBean;
 
-import bean.Rank;
+import com.ss.onlinegame.bean.Rank;
 
 import java.util.List;
 
